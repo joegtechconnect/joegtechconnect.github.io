@@ -1,6 +1,27 @@
 :root {
   --clr-primary-808080:
   --clr-neutral-FFFFFF:
+
+
+  --ff-primary: 'Roboto', sans-serif;
+
+  --ff-body: var(--ff-primary);
+  
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-700: 3rem;
+
+  --fs-body: var(--fs-400);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-400);
+
+
 }
 
 
@@ -78,4 +99,65 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+
+/* utility */
+
+.text-primary-400 {
+  color: var(--clr-primary-255,255,255)
+}
+
+.text-primary-500 {
+  color: var(--clr-primary-255,255,255)
+}
+
+.text-primary-700 {
+  color: var(--clr-primary-255,255,255)
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-128,128,128)
+}
+
+.bg-primary-500 {
+  background-color: var(--clr-primary-128,128,128)
+}
+
+.bg-primary-700 {
+  background-color: var(--clr-primary-128,128,128)
+}
+
+.container {
+  --max-width: 1000px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100%);
+  margin-inline: auto;
+
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+
+}
+
+@media (min-width: 25em) 
+
+{ .even-columns {
+grid-auto-flow: column;
+} 
+}
+
+
+/* general style */
+
+body {
+  font-size: var(--ff-body);
+  font-family: var(--ff-body);
+}
+
+.imgContainer{
+  float:left;
 }
